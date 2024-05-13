@@ -1,0 +1,40 @@
+Antes de realizar a pesquisa deve-se realizar este passo-a-passo um vez.
+Após isto, não é necessário realiza-lo mais nenhuma vez:
+Arquivos do projeto:
+	AddAmazonDate.py, Amazon_Scraping.py, TratarScrap.py, requirements.txt, pesquisa.ipynb.'
+
+-Com o python instalado na máquina, crie uma pasta para armazenar os arquivos do projeto.
+- No terminal do sistema (cmd, PowerShell, cli Linux, ou no proprio VS Code) execute o comando:
+	pip install virtualenv
+
+- Após instalado o virtualenv, no terminal vá até a pasta do projeto (comando cd + caminho da pasta)
+- Dentro da pasta no terminal crie um ambiente virtual com o comando:
+	virtualenv (nome virtualenv)
+
+Ambiente virtual criado!
+Copie os arquivos do projeto para dentro da pasta da virtualenv criada.
+
+A partir de agora, pode-se abrir o arquivo "pesquisa.ipynb" na IDE de preferência, associar o kernel a virtualenv criada.
+Se preferir pode seguir os passos seguintes para abrir o arquivo no Jupyter Notebook:
+
+- No terminal entre na virtualenv (comando cd (nome env)
+- Dentro da pasta da env execute o comando para ativar a env:
+	Scripts/activate para o Windows
+	source nome_da_virtualenv/bin/activate para o Linux
+
+- Instale o jupyter e ipykernel:
+	pip install jupyter (ou python -m pip install jupyter)
+	pip install ipykernel (ou python -m pip install ipykernel)
+
+- Execute o comando a seguir para associar o notebook a virtualenv:
+	python -m ipykernel install --user --name=(nome_virtualenv)
+
+- Abra o jupyter notebook, comando:
+	jupyter notebook
+
+- Com ele aberto, abrir o arquivo pesquisa.ipynb, no menu Kernel, opção Change Kernel, clicar na virtualenv criada.
+
+- Associado o kernel a virtualenv, siga os passos:
+	Execute a primeira célula (pip install -r requirements.txt), depois não é mais necessário executa-la, pode deletá-la.
+	Preencha as variáveis: item, pages (quantidade de paginas para pesquisar), caminho (local e nome do arquivo xlsx para salvar a pesquisa)
+	Execute todas as células e aguarde a extração.
